@@ -1,0 +1,23 @@
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(180, 137, 47, 0.12), transparent 55%),
+    var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.hero__inner {
+  max-width: 760px;
+}
+
+.hero__text {
+  font-size: 1.15rem;
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.hero .btn,
+.hero .btn-outline {
+  margin-top: 1rem;
+}
