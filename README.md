@@ -93,8 +93,11 @@ Selbst-Beförderung/Rechte-Weitergabe zu vermeiden).
 
 ## Hinweise
 
-- Alle Inhalte (Adresse, Termine, Ansprechpartner, Impressum/Datenschutz-Texte) sind
-  **Platzhalter** und müssen vor Veröffentlichung durch echte Angaben des Chors ersetzt werden.
+- Adresse, Probenzeit, Vereinsname (e.V.), Chorgeschichte und Chorleitung
+  (`src/data/organisation.js`, `src/pages/UeberUns.jsx`) sind bereits echte Angaben des Chores.
+  Weiterhin **Platzhalter**: Telefonnummer, Registergericht/-nummer, 1. Vorsitzende/r,
+  Schriftführung, Kassenführung (`src/data/organisation.js`, `src/pages/UeberUns.jsx`) sowie die
+  Beispiel-Termine (`src/data/termine.js`) — bitte vor Veröffentlichung ersetzen.
 - Das Kontaktformular (`src/components/ContactForm.jsx`) nutzt einen reinen `mailto:`-Link,
   es gibt kein Backend. Fotos für die Galerie liegen noch nicht vor (`src/pages/Galerie.jsx`).
 - Dark/Light Mode per Klasse `dark` auf `<html>`, Umschalter in `Header.jsx`, Persistenz über

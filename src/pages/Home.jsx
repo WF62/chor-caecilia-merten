@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSEO } from '../hooks/useSEO'
 import Hero from '../components/Hero'
 import { termine, formatiereDatum } from '../data/termine'
+import { ORGANISATION } from '../data/organisation'
 
 const stimmen = [
   { name: 'Sopran', desc: 'Helle, hohe Frauenstimmen' },
@@ -13,7 +14,7 @@ const stimmen = [
 export default function Home() {
   useSEO(
     'Start',
-    'Chor Cäcilia Merten – gemeinsam singen, Gemeinschaft erleben. Herzlich willkommen auf unserer Website.'
+    `${ORGANISATION.name} – ${ORGANISATION.slogan}. Herzlich willkommen auf unserer Website.`
   )
 
   const naechsteTermine = termine.slice(0, 3)
@@ -22,9 +23,14 @@ export default function Home() {
     <>
       <Hero
         eyebrow="Willkommen"
-        title="Chor Cäcilia Merten"
-        text="Wir sind ein gemischter Chor aus Merten, der Freude am gemeinsamen Singen mit einem festen Platz im kirchlichen und kulturellen Leben unserer Gemeinde verbindet. Ob Kirchenmusik, weltliches Repertoire oder Konzerte – bei uns ist jede Stimme willkommen."
+        title="Kirchenchor Cäcilia Merten"
+        text={ORGANISATION.slogan}
       >
+        <p style={{ maxWidth: 640, marginInline: 'auto' }}>
+          Seit 1871 gestaltet unser katholischer Kirchenchor Gottesdienste und Konzerte in
+          Bornheim-Merten mit. Ob Kirchenmusik oder weltliches Repertoire – bei uns ist jede
+          Stimme willkommen.
+        </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link to="/mitglied-werden" className="btn">Mitglied werden</Link>
           <Link to="/termine" className="btn btn-outline">Termine ansehen</Link>
@@ -36,9 +42,10 @@ export default function Home() {
           <span className="eyebrow">Über uns</span>
           <h2>Singen verbindet</h2>
           <p style={{ maxWidth: 680 }}>
-            Seit vielen Jahren gestaltet der Chor Cäcilia Merten Gottesdienste, Konzerte und
-            Feste in unserer Gemeinde mit. Unter der Leitung unserer Chorleitung proben wir
-            wöchentlich ein vielseitiges Repertoire aus geistlicher und weltlicher Chormusik.
+            Seit 1871 gestaltet der Kirchenchor Cäcilia Merten Gottesdienste, Konzerte und Feste
+            in unserer Gemeinde mit. Unter der Leitung von Chorleiter Stephan Krings proben rund
+            50 aktive Sängerinnen und Sänger wöchentlich ein vielseitiges Repertoire aus
+            geistlicher und weltlicher Chormusik.
           </p>
           <div className="grid grid-3" style={{ marginTop: '2rem' }}>
             {stimmen.map((s) => (
@@ -52,6 +59,19 @@ export default function Home() {
       </section>
 
       <section className="section section-alt">
+        <div className="container">
+          <span className="eyebrow">Proben</span>
+          <h2>Jede Woche neu</h2>
+          <p style={{ maxWidth: 680 }}>
+            Wir proben {ORGANISATION.probentag} im {ORGANISATION.probenort},{' '}
+            {ORGANISATION.strasse}, {ORGANISATION.plzOrt}. Neue Sängerinnen und Sänger sind
+            jederzeit willkommen — einfach vorbeikommen und mitsingen, ein Vorsingen ist nicht
+            nötig.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <span className="eyebrow">Termine</span>
           <h2>Was als Nächstes ansteht</h2>
@@ -70,7 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="eyebrow">Mitmachen</span>
           <h2>Lust, mitzusingen?</h2>

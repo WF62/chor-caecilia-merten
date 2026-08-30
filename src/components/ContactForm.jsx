@@ -4,13 +4,22 @@ import './ContactForm.css'
 
 const EMPFAENGER = ORGANISATION.email
 
-export default function ContactForm({ betreffVorgabe }) {
+const ANLIEGEN_OPTIONEN = [
+  'Allgemeine Frage',
+  'Ich möchte aktives Mitglied werden',
+  'Ich möchte passives Mitglied werden',
+  'Sonstiges',
+]
+
+export default function ContactForm({ anliegenVorgabe }) {
   const [form, setForm] = useState({
     name: '',
     email: '',
-    betreff: betreffVorgabe || '',
+    telefon: '',
+    anliegen: anliegenVorgabe || ANLIEGEN_OPTIONEN[0],
     nachricht: '',
   })
+  const [zustimmung, setZustimmung] = useState(false)
 
   function handleChange(e) {
     const { name, value } = e.target
@@ -19,10 +28,12 @@ export default function ContactForm({ betreffVorgabe }) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    const body = `${form.nachricht}\n\n— ${form.name} (${form.email})`
-    const mailto = `mailto:${EMPFAENGER}?subject=${encodeURIComponent(
-      form.betreff || 'Nachricht über die Website'
-    )}&body=${encodeURIComponent(body)}`
+    const body = [
+      form.nachricht,
+      '',
+      `— ${form.name} (${form.email}${form.telefon ? `, ${form.telefon}` : ''})`,
+    ].join('\n')
+    const mailto = `mailto:${EMPFAENGER}?subject=${encodeURIComponent(form.anliegen)}&body=${encodeURIComponent(body)}`
     window.location.href = mailto
   }
 
@@ -37,12 +48,32 @@ export default function ContactForm({ betreffVorgabe }) {
         <input type="email" name="email" required value={form.email} onChange={handleChange} />
       </label>
       <label>
-        Betreff
-        <input type="text" name="betreff" value={form.betreff} onChange={handleChange} />
+        Telefon (optional)
+        <input type="tel" name="telefon" value={form.telefon} onChange={handleChange} />
+      </label>
+      <label>
+        Anliegen
+        <select name="anliegen" value={form.anliegen} onChange={handleChange}>
+          {ANLIEGEN_OPTIONEN.map((option) => (
+            <option key={option} value={option}>{option}</option>
+          ))}
+        </select>
       </label>
       <label>
         Nachricht
         <textarea name="nachricht" rows={5} required value={form.nachricht} onChange={handleChange} />
+      </label>
+      <label className="contact-form__checkbox">
+        <input
+          type="checkbox"
+          required
+          checked={zustimmung}
+          onChange={(e) => setZustimmung(e.target.checked)}
+        />
+        <span>
+          Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage
+          verwendet werden (siehe <a href="/datenschutz">Datenschutzerklärung</a>).
+        </span>
       </label>
       <button type="submit" className="btn">Nachricht senden</button>
       <p className="contact-form__hint">
