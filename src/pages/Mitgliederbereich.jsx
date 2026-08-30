@@ -4,6 +4,7 @@ import { useAuth } from '../hooks/useAuth'
 import { supabase } from '../lib/supabaseClient'
 import { ladeMitgliedProfil, ladeDokumentStruktur } from '../utils/mitgliederStorage'
 import MitgliederLogin from '../components/MitgliederLogin'
+import AdminBereich from '../components/AdminBereich'
 import Hero from '../components/Hero'
 import './Mitgliederbereich.css'
 
@@ -46,6 +47,14 @@ export default function Mitgliederbereich() {
       aktiv = false
     }
   }, [profil])
+
+  async function strukturNeuLaden() {
+    try {
+      setStruktur(await ladeDokumentStruktur())
+    } catch (e) {
+      setFehler(e.message)
+    }
+  }
 
   if (loading) {
     return (
@@ -124,6 +133,8 @@ export default function Mitgliederbereich() {
               ))}
             </div>
           )}
+
+          {profil?.ist_admin && <AdminBereich struktur={struktur} onAenderung={strukturNeuLaden} />}
         </div>
       </section>
     </>

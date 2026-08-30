@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabaseClient'
 export async function ladeMitgliedProfil(userId) {
   const { data, error } = await supabase
     .from('chor_mitglieder')
-    .select('id, name')
+    .select('id, name, ist_admin')
     .eq('id', userId)
     .maybeSingle()
 

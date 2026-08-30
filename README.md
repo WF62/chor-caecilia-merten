@@ -45,7 +45,8 @@ passende Zeile in `chor_mitglieder` keinen Zugriff auf Chor-Daten. Client-seitig
 `VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` überschreibbar, falls später auf ein eigenes
 Supabase-Projekt umgezogen wird.
 
-**Neue Mitglieder einladen (nur der Vorstand, per Supabase-Dashboard/SQL-Editor):**
+**Neue Mitglieder einladen:** Über das Admin-UI (siehe unten, Tab "Einladungen") oder alternativ
+per Supabase-Dashboard/SQL-Editor:
 
 ```sql
 insert into public.chor_einladungen (email) values ('neue.person@example.com');
@@ -58,10 +59,37 @@ eine Zeile in `chor_mitglieder` frei — danach sieht die Person die Dokumentstr
 Einladung bleibt das Konto ohne Zugriff (Meldung "Noch kein Zugang").
 
 **Dateistruktur:** Kategorien in `chor_dokument_kategorien` (aktuell: Noten, Protokolle,
-Formulare, Sonstiges), Dokumente in `chor_dokumente` je Kategorie. `dateiurl` ist aktuell leer —
-es gibt noch keinen echten Datei-Upload/-Speicher (z. B. Supabase Storage), das wäre ein
-separater Ausbauschritt. Kategorien/Dokumente aktuell nur per SQL im Supabase-Dashboard pflegbar,
-kein Admin-UI in der App.
+Formulare, Sonstiges), Dokumente in `chor_dokumente` je Kategorie. `dateiurl` ist aktuell ein
+frei eintragbarer Link (z. B. zu einer extern gehosteten Datei) — es gibt noch keinen echten
+Datei-Upload/-Speicher direkt in der App (z. B. Supabase Storage), das wäre ein separater
+Ausbauschritt.
+
+### Admin-UI (`src/components/AdminBereich.jsx`)
+
+Mitglieder mit `chor_mitglieder.ist_admin = true` sehen unterhalb der Dokumentstruktur einen
+zusätzlichen Admin-Bereich mit drei Tabs:
+
+- **Einladungen** — neue Einladungen anlegen, Status (offen/registriert) einsehen, offene
+  Einladungen löschen.
+- **Dokumentstruktur** — Kategorien anlegen/umbenennen/löschen, Dokumente je Kategorie
+  anlegen/löschen und ihre Datei-URL setzen.
+- **Mitglieder** — rein lesende Übersicht aller registrierten Mitglieder inkl. Rolle.
+
+Alles serverseitig über RLS abgesichert (`chor_is_admin()`-Helper-Funktion, `security definer`),
+nicht nur UI-seitig ausgeblendet — ein Nicht-Admin kommt über die API nicht an diese Schreibrechte.
+
+**Ersten Admin einrichten:** Es gibt bewusst keine Self-Service-Admin-Werdung. Die Person muss
+sich zunächst regulär einladen (`chor_einladungen`) und registrieren, danach im
+Supabase-Dashboard/SQL-Editor:
+
+```sql
+update public.chor_mitglieder set ist_admin = true
+where id = (select id from auth.users where email = 'vorstand@example.com');
+```
+
+Danach kann dieser erste Admin über das UI weitere Einladungen/Dokumente verwalten. Weitere
+Admins ernennen läuft aktuell ebenfalls nur per SQL (bewusst nicht im UI, um versehentliche
+Selbst-Beförderung/Rechte-Weitergabe zu vermeiden).
 
 ## Hinweise
 
