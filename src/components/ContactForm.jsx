@@ -13,7 +13,8 @@ const ANLIEGEN_OPTIONEN = [
 
 export default function ContactForm({ anliegenVorgabe }) {
   const [form, setForm] = useState({
-    name: '',
+    vorname: '',
+    nachname: '',
     email: '',
     telefon: '',
     anliegen: anliegenVorgabe || ANLIEGEN_OPTIONEN[0],
@@ -31,7 +32,7 @@ export default function ContactForm({ anliegenVorgabe }) {
     const body = [
       form.nachricht,
       '',
-      `— ${form.name} (${form.email}${form.telefon ? `, ${form.telefon}` : ''})`,
+      `— ${form.vorname} ${form.nachname} (${form.email}${form.telefon ? `, ${form.telefon}` : ''})`,
     ].join('\n')
     const mailto = `mailto:${EMPFAENGER}?subject=${encodeURIComponent(form.anliegen)}&body=${encodeURIComponent(body)}`
     window.location.href = mailto
@@ -40,8 +41,12 @@ export default function ContactForm({ anliegenVorgabe }) {
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <label>
-        Name
-        <input type="text" name="name" required value={form.name} onChange={handleChange} />
+        Vorname
+        <input type="text" name="vorname" required value={form.vorname} onChange={handleChange} />
+      </label>
+      <label>
+        Nachname
+        <input type="text" name="nachname" required value={form.nachname} onChange={handleChange} />
       </label>
       <label>
         E-Mail
