@@ -9,6 +9,7 @@ import Termine from './pages/Termine.jsx'
 import Galerie from './pages/Galerie.jsx'
 import MitgliedWerden from './pages/MitgliedWerden.jsx'
 import Kontakt from './pages/Kontakt.jsx'
+import Mitgliederbereich from './pages/Mitgliederbereich.jsx'
 import Impressum from './pages/Impressum.jsx'
 import Datenschutz from './pages/Datenschutz.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/galerie" element={<Galerie />} />
           <Route path="/mitglied-werden" element={<MitgliedWerden />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/mitgliederbereich" element={<Mitgliederbereich />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="*" element={<NotFound />} />

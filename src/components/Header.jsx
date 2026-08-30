@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/galerie', label: 'Galerie' },
   { to: '/mitglied-werden', label: 'Mitglied werden' },
   { to: '/kontakt', label: 'Kontakt' },
+  { to: '/mitgliederbereich', label: 'Mitgliederbereich' },
 ]
 
 function getStoredTheme() {

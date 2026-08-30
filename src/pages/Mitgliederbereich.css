@@ -1,0 +1,43 @@
+.mitgliederbereich__kopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.mitgliederbereich__struktur {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.mitgliederbereich__liste {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mitgliederbereich__liste li {
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.mitgliederbereich__liste li:first-child {
+  border-top: none;
+}
+
+.mitgliederbereich__desc {
+  color: var(--text-muted);
+}
+
+.mitgliederbereich__leer {
+  font-size: 0.9rem;
+  font-style: italic;
+}
