@@ -11,6 +11,10 @@ export default function Termine() {
 
       <section className="section">
         <div className="container">
+          <p style={{ fontSize: '0.85rem', marginBottom: '2rem' }}>
+            Hinweis: Die folgenden Termine sind Beispiele zur Veranschaulichung und müssen durch
+            die echten Termine des Chors ersetzt werden (siehe <code>src/data/termine.js</code>).
+          </p>
           <div className="grid" style={{ gridTemplateColumns: '1fr' }}>
             {termine.map((t) => (
               <div className="card" key={t.id} style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>

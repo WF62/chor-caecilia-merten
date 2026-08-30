@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { ORGANISATION } from '../data/organisation'
 import './ContactForm.css'
 
-const EMPFAENGER = 'info@chor-caecilia-merten.de'
+const EMPFAENGER = ORGANISATION.email
 
 export default function ContactForm({ betreffVorgabe }) {
   const [form, setForm] = useState({

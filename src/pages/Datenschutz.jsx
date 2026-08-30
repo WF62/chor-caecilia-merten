@@ -1,4 +1,5 @@
 import { useSEO } from '../hooks/useSEO'
+import { ORGANISATION } from '../data/organisation'
 
 export default function Datenschutz() {
   useSEO('Datenschutz', 'Datenschutzerklärung des Chores Cäcilia Merten.')
@@ -10,9 +11,9 @@ export default function Datenschutz() {
 
         <h2>1. Verantwortlicher</h2>
         <p>
-          Chor Cäcilia Merten, Kirchstraße 1, 50389 Merten
+          {ORGANISATION.name}, {ORGANISATION.strasse}, {ORGANISATION.plzOrt}
           <br />
-          E-Mail: info@chor-caecilia-merten.de
+          E-Mail: {ORGANISATION.email}
         </p>
 
         <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>

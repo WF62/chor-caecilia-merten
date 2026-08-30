@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ORGANISATION } from '../data/organisation'
 import './Footer.css'
 
 export default function Footer() {
@@ -6,20 +7,20 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div>
-          <h3>Chor Cäcilia Merten</h3>
+          <h3>{ORGANISATION.name}</h3>
           <p>
-            Pfarrheim Merten
+            {ORGANISATION.probenort}
             <br />
-            Kirchstraße 1 · 50389 Merten
+            {ORGANISATION.strasse} · {ORGANISATION.plzOrt}
           </p>
         </div>
 
         <div>
           <h3>Kontakt</h3>
           <p>
-            <a href="mailto:info@chor-caecilia-merten.de">info@chor-caecilia-merten.de</a>
+            <a href={`mailto:${ORGANISATION.email}`}>{ORGANISATION.email}</a>
             <br />
-            <a href="tel:+4922329912345">02232 / 99123 45</a>
+            <a href={ORGANISATION.telefonHref}>{ORGANISATION.telefon}</a>
           </p>
         </div>
 
@@ -35,7 +36,7 @@ export default function Footer() {
       </div>
 
       <p className="site-footer__copy">
-        © {new Date().getFullYear()} Chor Cäcilia Merten
+        © {new Date().getFullYear()} {ORGANISATION.name}
       </p>
     </footer>
   )

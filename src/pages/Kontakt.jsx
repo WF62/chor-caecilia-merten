@@ -1,6 +1,7 @@
 import { useSEO } from '../hooks/useSEO'
 import Hero from '../components/Hero'
 import ContactForm from '../components/ContactForm'
+import { ORGANISATION } from '../data/organisation'
 
 export default function Kontakt() {
   useSEO('Kontakt', 'So erreichst du den Chor Cäcilia Merten.')
@@ -14,20 +15,20 @@ export default function Kontakt() {
           <div style={{ flex: '1 1 280px' }}>
             <h2>Adresse & Erreichbarkeit</h2>
             <p>
-              Chor Cäcilia Merten
+              {ORGANISATION.name}
               <br />
-              Pfarrheim Merten
+              {ORGANISATION.probenort}
               <br />
-              Kirchstraße 1
+              {ORGANISATION.strasse}
               <br />
-              50389 Merten
+              {ORGANISATION.plzOrt}
             </p>
             <p>
-              E-Mail: <a href="mailto:info@chor-caecilia-merten.de">info@chor-caecilia-merten.de</a>
+              E-Mail: <a href={`mailto:${ORGANISATION.email}`}>{ORGANISATION.email}</a>
               <br />
-              Telefon: <a href="tel:+4922329912345">02232 / 99123 45</a>
+              Telefon: <a href={ORGANISATION.telefonHref}>{ORGANISATION.telefon}</a>
             </p>
-            <p>Proben: donnerstags, 19:30 Uhr im Pfarrheim Merten.</p>
+            <p>Proben: {ORGANISATION.probentag} im {ORGANISATION.probenort}.</p>
           </div>
 
           <div style={{ flex: '1 1 320px' }}>

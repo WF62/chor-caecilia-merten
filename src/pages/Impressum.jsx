@@ -1,4 +1,5 @@
 import { useSEO } from '../hooks/useSEO'
+import { ORGANISATION } from '../data/organisation'
 
 export default function Impressum() {
   useSEO('Impressum', 'Impressum des Chores Cäcilia Merten.')
@@ -10,28 +11,28 @@ export default function Impressum() {
 
         <h2>Angaben gemäß § 5 TMG</h2>
         <p>
-          Chor Cäcilia Merten
+          {ORGANISATION.name}
           <br />
-          [Rechtsform, z. B. e. V.]
+          {ORGANISATION.rechtsform}
           <br />
-          Kirchstraße 1
+          {ORGANISATION.strasse}
           <br />
-          50389 Merten
+          {ORGANISATION.plzOrt}
         </p>
 
         <h2>Vertreten durch</h2>
-        <p>[Name des/der 1. Vorsitzenden]</p>
+        <p>{ORGANISATION.vertretenDurch}</p>
 
         <h2>Kontakt</h2>
         <p>
-          Telefon: 02232 / 99123 45
+          Telefon: {ORGANISATION.telefon}
           <br />
-          E-Mail: info@chor-caecilia-merten.de
+          E-Mail: {ORGANISATION.email}
         </p>
 
         <h2>Vereinsregister</h2>
         <p>
-          [Registergericht] · Registernummer: [VR-Nummer]
+          {ORGANISATION.registergericht} · Registernummer: {ORGANISATION.registernummer}
         </p>
 
         <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
@@ -39,7 +40,7 @@ export default function Impressum() {
 
         <p style={{ fontSize: '0.85rem', marginTop: '2rem' }}>
           Hinweis: Dies ist ein Platzhaltertext. Bitte durch die tatsächlichen
-          rechtlichen Angaben des Vereins ersetzen.
+          rechtlichen Angaben des Vereins ersetzen (siehe <code>src/data/organisation.js</code>).
         </p>
       </div>
     </section>
