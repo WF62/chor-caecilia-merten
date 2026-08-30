@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import ChurchIcon from './ChurchIcon'
 import './Header.css'
 
 const navLinks = [
@@ -30,7 +31,9 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header__inner">
         <NavLink to="/" className="site-header__brand" onClick={() => setMenuOpen(false)}>
-          <span className="site-header__brand-mark" aria-hidden="true">♪</span>
+          <span className="site-header__brand-mark" aria-hidden="true">
+            <ChurchIcon size={22} />
+          </span>
           <span>
             Chor Cäcilia
             <br />
