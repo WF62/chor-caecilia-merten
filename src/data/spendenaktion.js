@@ -5,7 +5,7 @@
 // sobald sie freigeschaltet ist. Bankverbindung dient als Alternative,
 // ebenfalls noch Platzhalter — bitte durch die echte Verbindung des Vereins
 // ersetzen.
-export const SPENDENAKTION = {
+export const SPENDENAKTION_WEIHNACHTSKONZERT = {
   aktiv: true,
   titel: '5-Euro-Aktion: Abschiedskonzert für unseren Chorleiter',
   einleitung: [
@@ -20,22 +20,31 @@ export const SPENDENAKTION = {
     'Damit wir auch in diesem Jahr das Weihnachtskonzert mit professionellen Akteuren ' +
       'durchführen können, benötigen wir Ihre Unterstützung.',
   ],
-  konzertDatum: 'Sonntag, 13. Dezember 2026 (3. Advent)',
-  konzertOrt: 'Pfarrkirche St. Martin, Merten',
+  termin: {
+    datum: 'Sonntag, 13. Dezember 2026 (3. Advent)',
+    ort: 'Pfarrkirche St. Martin, Merten',
+  },
   aufruf:
     'Im vergangenen Jahr hat unsere 5-Euro-Aktion „Schüler bauen Stühle" als Crowdfunding-' +
     'Kampagne auf „Allzesamme" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle für ' +
     'unseren Chor finanziert. Nach demselben Modell möchten wir nun auch das ' +
     'Weihnachtskonzert unterstützen — jede Spende ab 5 Euro hilft uns weiter.',
-  foerderhinweis:
-    'Das Besondere an der Aktion: Die Volksbank Köln Bonn verdoppelt nicht nur, sondern legt ' +
-    'noch etwas drauf — für jede Spende ab 5 Euro gibt die Bank zusätzlich 10 Euro dazu. Bei ' +
-    '250 Spenderinnen und Spendern à 5 Euro erreichen wir so den Höchstförderbetrag von ' +
-    '2.500 Euro. Je mehr mitmachen, desto mehr kommt am Ende zusammen — machen Sie mit!',
-  besonderheit:
-    'Dieses Weihnachtskonzert ist etwas ganz Besonderes: Wir verabschieden unseren ' +
-    'Chorleiter Stephan Krings nach 32 Jahren.',
-  verlosungshinweis:
+  hervorgehoben: [
+    {
+      text:
+        'Das Besondere an der Aktion: Die Volksbank Köln Bonn verdoppelt nicht nur, sondern legt ' +
+        'noch etwas drauf — für jede Spende ab 5 Euro gibt die Bank zusätzlich 10 Euro dazu. Bei ' +
+        '250 Spenderinnen und Spendern à 5 Euro erreichen wir so den Höchstförderbetrag von ' +
+        '2.500 Euro. Je mehr mitmachen, desto mehr kommt am Ende zusammen — machen Sie mit!',
+    },
+    {
+      text:
+        'Dieses Weihnachtskonzert ist etwas ganz Besonderes: Wir verabschieden unseren ' +
+        'Chorleiter Stephan Krings nach 32 Jahren.',
+      betont: true,
+    },
+  ],
+  abschluss:
     'Wie im letzten Jahr warten auf 5 Gewinnerinnen und Gewinner unserer kleinen Verlosung ' +
     'nette Preise — es lohnt sich, beim Konzert dabei zu sein!',
   plattform: 'Allzesamme (Volksbank Köln Bonn)',

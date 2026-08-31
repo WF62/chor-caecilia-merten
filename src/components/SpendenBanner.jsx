@@ -1,33 +1,18 @@
-import { SPENDENAKTION } from '../data/spendenaktion'
 import { ORGANISATION } from '../data/organisation'
 import './SpendenBanner.css'
 
-export default function SpendenBanner() {
-  if (!SPENDENAKTION.aktiv) return null
+export default function SpendenBanner({ daten, eyebrow = '🎄 Spendenaktion', mailtoBetreff }) {
+  if (!daten.aktiv) return null
 
-  const {
-    titel,
-    einleitung,
-    konzertDatum,
-    konzertOrt,
-    aufruf,
-    foerderhinweis,
-    besonderheit,
-    verlosungshinweis,
-    plattform,
-    kampagnenUrl,
-    spendenkonto,
-  } = SPENDENAKTION
+  const { titel, einleitung, termin, aufruf, hervorgehoben, abschluss, plattform, kampagnenUrl, spendenkonto } = daten
   const kampagneVerfuegbar = !kampagnenUrl.startsWith('[')
-  const mailto = `mailto:${ORGANISATION.email}?subject=${encodeURIComponent(
-    '5-Euro-Aktion – Weihnachtskonzert'
-  )}`
+  const mailto = `mailto:${ORGANISATION.email}?subject=${encodeURIComponent(mailtoBetreff || titel)}`
 
   return (
     <section className="section">
       <div className="container">
         <div className="spenden-banner">
-          <span className="spenden-banner__eyebrow">🎄 Spendenaktion</span>
+          <span className="spenden-banner__eyebrow">{eyebrow}</span>
           <h2>{titel}</h2>
 
           <div className="spenden-banner__grid">
@@ -35,14 +20,26 @@ export default function SpendenBanner() {
               {einleitung.map((absatz) => (
                 <p key={absatz.slice(0, 24)}>{absatz}</p>
               ))}
-              <p className="spenden-banner__konzert">
-                <span>📅 {konzertDatum}</span>
-                <span>📍 {konzertOrt}</span>
-              </p>
+              {termin && (
+                <p className="spenden-banner__konzert">
+                  {termin.datum && <span>📅 {termin.datum}</span>}
+                  {termin.ort && <span>📍 {termin.ort}</span>}
+                </p>
+              )}
               <p>{aufruf}</p>
-              <p className="spenden-banner__foerderhinweis">{foerderhinweis}</p>
-              <p className="spenden-banner__besonderheit">{besonderheit}</p>
-              <p>{verlosungshinweis}</p>
+              {(hervorgehoben || []).map((absatz) => (
+                <p
+                  key={absatz.text.slice(0, 24)}
+                  className={
+                    absatz.betont
+                      ? 'spenden-banner__besonderheit'
+                      : 'spenden-banner__foerderhinweis'
+                  }
+                >
+                  {absatz.text}
+                </p>
+              ))}
+              {abschluss && <p>{abschluss}</p>}
               {kampagneVerfuegbar ? (
                 <a href={kampagnenUrl} target="_blank" rel="noreferrer" className="btn">
                   Zur Spendenaktion auf „{plattform}"

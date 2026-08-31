@@ -4,6 +4,8 @@ import Hero from '../components/Hero'
 import SpendenBanner from '../components/SpendenBanner'
 import { termine, formatiereDatum } from '../data/termine'
 import { ORGANISATION } from '../data/organisation'
+import { SPENDENAKTION_WEIHNACHTSKONZERT } from '../data/spendenaktion'
+import { SPENDENAKTION_SCHWERIN } from '../data/spendenaktionSchwerin'
 
 const stimmen = [
   { name: 'Sopran', desc: 'Helle, hohe Frauenstimmen' },
@@ -60,7 +62,15 @@ export default function Home() {
         </div>
       </Hero>
 
-      <SpendenBanner />
+      <SpendenBanner
+        daten={SPENDENAKTION_WEIHNACHTSKONZERT}
+        mailtoBetreff="5-Euro-Aktion – Weihnachtskonzert"
+      />
+      <SpendenBanner
+        daten={SPENDENAKTION_SCHWERIN}
+        eyebrow="✈️ Spendenaktion"
+        mailtoBetreff="5-Euro-Aktion – Chorausflug Schwerin"
+      />
 
       <section className="section">
         <div className="container">
