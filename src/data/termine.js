@@ -21,7 +21,7 @@ export const termine = [
   {
     id: 3,
     datum: '2026-12-13',
-    zeit: '18:00',
+    zeit: '16:00',
     titel: 'Abschiedskonzert für Chorleiter Stephan Krings',
     ort: 'Pfarrkirche St. Martin, Merten',
     beschreibung:
