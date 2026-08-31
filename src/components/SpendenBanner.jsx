@@ -11,6 +11,7 @@ export default function SpendenBanner() {
     konzertDatum,
     konzertOrt,
     aufruf,
+    foerderhinweis,
     besonderheit,
     plattform,
     kampagnenUrl,
@@ -38,6 +39,7 @@ export default function SpendenBanner() {
                 <span>📍 {konzertOrt}</span>
               </p>
               <p>{aufruf}</p>
+              <p className="spenden-banner__foerderhinweis">{foerderhinweis}</p>
               <p className="spenden-banner__besonderheit">{besonderheit}</p>
               {kampagneVerfuegbar ? (
                 <a href={kampagnenUrl} target="_blank" rel="noreferrer" className="btn">

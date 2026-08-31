@@ -24,6 +24,11 @@ export const SPENDENAKTION = {
     'Kampagne auf „viele schaffen mehr" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle ' +
     'für unseren Chor finanziert. Nach demselben Modell möchten wir nun auch das ' +
     'Weihnachtskonzert unterstützen — jede Spende ab 5 Euro hilft uns weiter.',
+  foerderhinweis:
+    'Das Besondere an der Aktion: Die Volksbank Köln Bonn verdoppelt nicht nur, sondern legt ' +
+    'noch etwas drauf — für jede Spende ab 5 Euro gibt die Bank zusätzlich 10 Euro dazu. Bei ' +
+    '250 Spenderinnen und Spendern à 5 Euro erreichen wir so den Höchstförderbetrag von ' +
+    '2.500 Euro. Je mehr mitmachen, desto mehr kommt am Ende zusammen — machen Sie mit!',
   besonderheit:
     'Dieses Weihnachtskonzert ist etwas ganz Besonderes: Wir verabschieden unseren ' +
     'Chorleiter Stephan Krings nach 32 Jahren.',

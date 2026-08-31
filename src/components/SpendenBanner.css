@@ -72,6 +72,13 @@
   font-weight: 600;
 }
 
+.spenden-banner__foerderhinweis {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.25rem 0;
+}
+
 .spenden-banner__besonderheit {
   font-weight: 700;
   opacity: 1;
