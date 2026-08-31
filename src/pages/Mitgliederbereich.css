@@ -41,3 +41,13 @@
   font-size: 0.9rem;
   font-style: italic;
 }
+
+.mitgliederbereich__vorstandsbereich {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px dashed var(--border);
+}
+
+.mitgliederbereich__vorstandsbereich h2 {
+  margin-bottom: 0.2em;
+}

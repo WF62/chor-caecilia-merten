@@ -183,7 +183,7 @@ function MitgliederUebersicht() {
 }
 
 function DokumenteVerwaltung({ struktur, onAenderung }) {
-  const [neueKategorie, setNeueKategorie] = useState({ titel: '', beschreibung: '' })
+  const [neueKategorie, setNeueKategorie] = useState({ titel: '', beschreibung: '', nur_vorstand: false })
   const [fehler, setFehler] = useState(null)
 
   async function handleFehler(fn) {
@@ -203,9 +203,10 @@ function DokumenteVerwaltung({ struktur, onAenderung }) {
         titel: neueKategorie.titel,
         beschreibung: neueKategorie.beschreibung,
         reihenfolge: struktur.length,
+        nur_vorstand: neueKategorie.nur_vorstand,
       })
     )
-    setNeueKategorie({ titel: '', beschreibung: '' })
+    setNeueKategorie({ titel: '', beschreibung: '', nur_vorstand: false })
   }
 
   return (
@@ -224,6 +225,14 @@ function DokumenteVerwaltung({ struktur, onAenderung }) {
           value={neueKategorie.beschreibung}
           onChange={(e) => setNeueKategorie((k) => ({ ...k, beschreibung: e.target.value }))}
         />
+        <label className="admin-bereich__checkbox">
+          <input
+            type="checkbox"
+            checked={neueKategorie.nur_vorstand}
+            onChange={(e) => setNeueKategorie((k) => ({ ...k, nur_vorstand: e.target.checked }))}
+          />
+          Nur Vorstand
+        </label>
         <button type="submit" className="btn">Kategorie anlegen</button>
       </form>
 
@@ -252,6 +261,10 @@ function KategorieBlock({ kategorie, onAenderung }) {
     if (window.confirm(`Kategorie "${kategorie.titel}" inklusive aller enthaltenen Dokumente löschen?`)) {
       onAenderung(() => loescheKategorie(kategorie.id))
     }
+  }
+
+  async function handleVorstandUmschalten() {
+    onAenderung(() => aktualisiereKategorie(kategorie.id, { nur_vorstand: !kategorie.nur_vorstand }))
   }
 
   async function handleNeuesDokument(e) {
@@ -285,8 +298,16 @@ function KategorieBlock({ kategorie, onAenderung }) {
   return (
     <div className="admin-bereich__kategorie">
       <div className="admin-bereich__kategorie-kopf">
-        <strong>{kategorie.titel}</strong>
+        <strong>
+          {kategorie.titel}
+          {kategorie.nur_vorstand && (
+            <span className="admin-bereich__badge admin-bereich__badge--vorstand">Nur Vorstand</span>
+          )}
+        </strong>
         <span>
+          <button type="button" onClick={handleVorstandUmschalten}>
+            {kategorie.nur_vorstand ? 'Für alle freigeben' : 'In Vorstandsbereich verschieben'}
+          </button>
           <button type="button" onClick={handleTitelAendern}>Umbenennen</button>
           <button type="button" className="admin-bereich__loeschen" onClick={handleKategorieLoeschen}>
             Löschen

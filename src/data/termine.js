@@ -1,18 +1,20 @@
 // Platzhalter-Termine – bitte durch echte Termine des Chors ersetzen.
 export const termine = [
   {
-    id: 1,
-    datum: '2026-09-10',
-    zeit: '19:30',
-    titel: '[Beispiel] Chorprobe',
-    ort: '[Probenort einfügen]',
-    beschreibung: 'Reguläre wöchentliche Probe, neue Sängerinnen und Sänger sind herzlich willkommen.',
+    id: 5,
+    datum: '2026-05-14',
+    zeit: 'ganztägig',
+    titel: 'Chorausflug nach Schwerin',
+    ort: 'Schwerin und Umgebung',
+    beschreibung:
+      'Mehrtägiger Ausflug von Christi Himmelfahrt (Donnerstag, 14. Mai) bis Sonntag, ' +
+      '17. Mai 2026. Interessierte können sich schon jetzt melden.',
   },
   {
     id: 2,
     datum: '2026-11-22',
     zeit: '17:00',
-    titel: '[Beispiel] Cäcilienfest',
+    titel: 'Cäcilienfest',
     ort: '[Veranstaltungsort einfügen]',
     beschreibung: 'Feierlicher Gottesdienst zu Ehren unserer Patronin mit anschließendem Beisammensein.',
   },
@@ -28,10 +30,18 @@ export const termine = [
       '5-Euro-Aktion auf der Startseite.',
   },
   {
+    id: 6,
+    datum: '2026-12-25',
+    zeit: '[Uhrzeit einfügen]',
+    titel: 'Weihnachtsmesse',
+    ort: '[Veranstaltungsort einfügen]',
+    beschreibung: 'Der Chor gestaltet die Weihnachtsmesse musikalisch mit.',
+  },
+  {
     id: 4,
     datum: '2027-04-05',
     zeit: '10:00',
-    titel: '[Beispiel] Osterhochamt',
+    titel: 'Osterhochamt',
     ort: '[Veranstaltungsort einfügen]',
     beschreibung: 'Musikalische Gestaltung des Osterhochamts.',
   },

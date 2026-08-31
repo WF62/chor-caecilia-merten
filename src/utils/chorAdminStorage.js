@@ -36,10 +36,10 @@ export async function ladeAlleMitglieder() {
 
 // Kategorien
 
-export async function legeKategorieAn({ titel, beschreibung, reihenfolge }) {
+export async function legeKategorieAn({ titel, beschreibung, reihenfolge, nur_vorstand }) {
   const { error } = await supabase
     .from('chor_dokument_kategorien')
-    .insert({ titel, beschreibung: beschreibung || null, reihenfolge })
+    .insert({ titel, beschreibung: beschreibung || null, reihenfolge, nur_vorstand: !!nur_vorstand })
   if (error) throw error
 }
 

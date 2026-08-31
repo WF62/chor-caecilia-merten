@@ -20,7 +20,7 @@ export default function Termine() {
               <div className="card" key={t.id} style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
                 <div style={{ minWidth: 140 }}>
                   <strong style={{ color: 'var(--gold)', display: 'block' }}>{formatiereDatum(t.datum)}</strong>
-                  <span style={{ color: 'var(--text-muted)' }}>{t.zeit} Uhr</span>
+                  <span style={{ color: 'var(--text-muted)' }}>{t.zeit.includes(':') ? `${t.zeit} Uhr` : t.zeit}</span>
                 </div>
                 <div style={{ flex: 1, minWidth: 220 }}>
                   <h3 style={{ margin: 0 }}>{t.titel}</h3>

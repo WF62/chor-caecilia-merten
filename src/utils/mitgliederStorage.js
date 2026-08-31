@@ -14,7 +14,7 @@ export async function ladeMitgliedProfil(userId) {
 export async function ladeDokumentStruktur() {
   const { data: kategorien, error: fehlerKategorien } = await supabase
     .from('chor_dokument_kategorien')
-    .select('id, titel, beschreibung, reihenfolge')
+    .select('id, titel, beschreibung, reihenfolge, nur_vorstand')
     .order('reihenfolge', { ascending: true })
 
   if (fehlerKategorien) throw fehlerKategorien

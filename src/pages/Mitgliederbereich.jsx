@@ -56,6 +56,8 @@ export default function Mitgliederbereich() {
     }
   }
 
+  const vorstandKategorien = struktur.filter((kategorie) => kategorie.nur_vorstand)
+
   if (loading) {
     return (
       <section className="section">
@@ -107,30 +109,25 @@ export default function Mitgliederbereich() {
 
           {profil && (
             <div className="mitgliederbereich__struktur">
-              {struktur.map((kategorie) => (
-                <div className="card" key={kategorie.id}>
-                  <h3>{kategorie.titel}</h3>
-                  {kategorie.beschreibung && <p>{kategorie.beschreibung}</p>}
-                  {kategorie.dokumente.length === 0 ? (
-                    <p className="mitgliederbereich__leer">Noch keine Dokumente in dieser Kategorie.</p>
-                  ) : (
-                    <ul className="mitgliederbereich__liste">
-                      {kategorie.dokumente.map((dokument) => (
-                        <li key={dokument.id}>
-                          {dokument.dateiurl ? (
-                            <a href={dokument.dateiurl} target="_blank" rel="noreferrer">
-                              {dokument.titel}
-                            </a>
-                          ) : (
-                            <span>{dokument.titel}</span>
-                          )}
-                          {dokument.beschreibung && <span className="mitgliederbereich__desc"> — {dokument.beschreibung}</span>}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+              {struktur
+                .filter((kategorie) => !kategorie.nur_vorstand)
+                .map((kategorie) => (
+                  <KategorieKarte key={kategorie.id} kategorie={kategorie} />
+                ))}
+            </div>
+          )}
+
+          {profil && vorstandKategorien.length > 0 && (
+            <div className="mitgliederbereich__vorstandsbereich">
+              <h2>🗂️ Vorstandsbereich</h2>
+              <p className="mitgliederbereich__desc">
+                Nur für den Vorstand sichtbar.
+              </p>
+              <div className="mitgliederbereich__struktur">
+                {vorstandKategorien.map((kategorie) => (
+                  <KategorieKarte key={kategorie.id} kategorie={kategorie} />
+                ))}
+              </div>
             </div>
           )}
 
@@ -138,5 +135,32 @@ export default function Mitgliederbereich() {
         </div>
       </section>
     </>
+  )
+}
+
+function KategorieKarte({ kategorie }) {
+  return (
+    <div className="card">
+      <h3>{kategorie.titel}</h3>
+      {kategorie.beschreibung && <p>{kategorie.beschreibung}</p>}
+      {kategorie.dokumente.length === 0 ? (
+        <p className="mitgliederbereich__leer">Noch keine Dokumente in dieser Kategorie.</p>
+      ) : (
+        <ul className="mitgliederbereich__liste">
+          {kategorie.dokumente.map((dokument) => (
+            <li key={dokument.id}>
+              {dokument.dateiurl ? (
+                <a href={dokument.dateiurl} target="_blank" rel="noreferrer">
+                  {dokument.titel}
+                </a>
+              ) : (
+                <span>{dokument.titel}</span>
+              )}
+              {dokument.beschreibung && <span className="mitgliederbereich__desc"> — {dokument.beschreibung}</span>}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   )
 }

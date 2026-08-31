@@ -103,7 +103,9 @@ export default function Home() {
           <div className="grid grid-3" style={{ marginTop: '2rem' }}>
             {naechsteTermine.map((t) => (
               <div className="card" key={t.id}>
-                <strong style={{ color: 'var(--gold)' }}>{formatiereDatum(t.datum)} · {t.zeit} Uhr</strong>
+                <strong style={{ color: 'var(--gold)' }}>
+                  {formatiereDatum(t.datum)} · {t.zeit.includes(':') ? `${t.zeit} Uhr` : t.zeit}
+                </strong>
                 <h3 style={{ marginTop: '0.4em' }}>{t.titel}</h3>
                 <p>{t.ort}</p>
               </div>

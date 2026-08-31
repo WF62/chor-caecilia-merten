@@ -103,6 +103,22 @@
   color: #1b7a3d;
 }
 
+.admin-bereich__badge--vorstand {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
+.admin-bereich__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 .admin-bereich__loeschen {
   background: none;
   border: none;
