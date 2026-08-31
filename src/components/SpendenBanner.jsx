@@ -5,7 +5,8 @@ import './SpendenBanner.css'
 export default function SpendenBanner() {
   if (!SPENDENAKTION.aktiv) return null
 
-  const { titel, anlass, konzertDatum, konzertOrt, aufruf, spendenkonto } = SPENDENAKTION
+  const { titel, anlass, konzertDatum, konzertOrt, aufruf, plattform, kampagnenUrl, spendenkonto } = SPENDENAKTION
+  const kampagneVerfuegbar = !kampagnenUrl.startsWith('[')
   const mailto = `mailto:${ORGANISATION.email}?subject=${encodeURIComponent(
     '5-Euro-Aktion – Weihnachtskonzert'
   )}`
@@ -25,11 +26,22 @@ export default function SpendenBanner() {
                 <span>📍 {konzertOrt}</span>
               </p>
               <p>{aufruf}</p>
-              <a href={mailto} className="btn">Ich möchte spenden</a>
+              {kampagneVerfuegbar ? (
+                <a href={kampagnenUrl} target="_blank" rel="noreferrer" className="btn">
+                  Zur Spendenaktion auf „{plattform}"
+                </a>
+              ) : (
+                <>
+                  <p className="spenden-banner__hinweis">
+                    Die Crowdfunding-Kampagne auf „{plattform}" wird in Kürze freigeschaltet.
+                  </p>
+                  <a href={mailto} className="btn">Ich möchte informiert werden</a>
+                </>
+              )}
             </div>
 
             <div className="spenden-banner__konto">
-              <h3>Spendenkonto</h3>
+              <h3>Alternativ: Spendenkonto</h3>
               <dl>
                 <dt>Empfänger</dt>
                 <dd>{spendenkonto.inhaber}</dd>

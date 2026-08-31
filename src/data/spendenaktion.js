@@ -1,4 +1,7 @@
-// Bankverbindung ist noch Platzhalter — bitte durch die echte Verbindung des Vereins ersetzen.
+// Kampagnen-Link ist noch Platzhalter — bitte durch den echten Link zur
+// Crowdfunding-Kampagne auf "viele schaffen mehr" ersetzen, sobald sie
+// freigeschaltet ist. Bankverbindung dient als Alternative, ebenfalls noch
+// Platzhalter — bitte durch die echte Verbindung des Vereins ersetzen.
 export const SPENDENAKTION = {
   aktiv: true,
   titel: '5-Euro-Aktion: Abschiedskonzert für unseren Chorleiter',
@@ -9,9 +12,12 @@ export const SPENDENAKTION = {
   konzertOrt: 'Pfarrkirche St. Martin, Merten',
   aufruf:
     'Damit wir dieses Konzert stemmen können, sind wir auf Spenden angewiesen. Im vergangenen ' +
-    'Jahr hat unsere 5-Euro-Aktion „Schüler bauen Stühle" mit großem Erfolg neue Stühle für ' +
-    'unseren Chor finanziert. Mit derselben Aktion möchten wir nun auch das Weihnachtskonzert ' +
+    'Jahr hat unsere 5-Euro-Aktion „Schüler bauen Stühle" als Crowdfunding-Kampagne auf ' +
+    '„viele schaffen mehr" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle für unseren ' +
+    'Chor finanziert. Nach demselben Modell möchten wir nun auch das Weihnachtskonzert ' +
     'unterstützen — jede Spende ab 5 Euro hilft uns weiter.',
+  plattform: 'viele schaffen mehr (Volksbank Köln Bonn)',
+  kampagnenUrl: '[Link zur Kampagne auf viele-schaffen-mehr.de einfügen]',
   spendenkonto: {
     inhaber: 'Kirchenchor Cäcilia Merten e.V.',
     iban: '[IBAN einfügen]',

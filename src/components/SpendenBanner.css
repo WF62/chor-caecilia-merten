@@ -72,6 +72,12 @@
   font-weight: 600;
 }
 
+.spenden-banner__hinweis {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
 .spenden-banner .btn {
   background: var(--gold);
   border-color: var(--gold);
