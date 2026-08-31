@@ -7,7 +7,7 @@
 // ersetzen.
 export const SPENDENAKTION_WEIHNACHTSKONZERT = {
   aktiv: true,
-  titel: '5-Euro-Aktion: Abschiedskonzert für unseren Chorleiter',
+  titel: 'Weihnachtskonzert: Unsere 5-Euro-Aktion auf Allzesamme',
   einleitung: [
     'Seit einigen Jahren fusionieren katholische Kirchengemeinden. Durch Sparmaßnahmen ' +
       'fallen an vielen Orten wichtige Einrichtungen weg — darunter auch Chöre. Wir stellen ' +
