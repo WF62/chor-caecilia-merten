@@ -1,7 +1,10 @@
 // Kampagnen-Link ist noch Platzhalter — bitte durch den echten Link zur
-// Crowdfunding-Kampagne auf "viele schaffen mehr" ersetzen, sobald sie
-// freigeschaltet ist. Bankverbindung dient als Alternative, ebenfalls noch
-// Platzhalter — bitte durch die echte Verbindung des Vereins ersetzen.
+// Crowdfunding-Kampagne auf "Allzesamme" (der bundesweite Markenname der
+// Plattform lautet "viele schaffen mehr" — im Rheinland, u. a. bei der
+// Volksbank Köln Bonn, tritt sie unter dem Namen "Allzesamme" auf) ersetzen,
+// sobald sie freigeschaltet ist. Bankverbindung dient als Alternative,
+// ebenfalls noch Platzhalter — bitte durch die echte Verbindung des Vereins
+// ersetzen.
 export const SPENDENAKTION = {
   aktiv: true,
   titel: '5-Euro-Aktion: Abschiedskonzert für unseren Chorleiter',
@@ -21,8 +24,8 @@ export const SPENDENAKTION = {
   konzertOrt: 'Pfarrkirche St. Martin, Merten',
   aufruf:
     'Im vergangenen Jahr hat unsere 5-Euro-Aktion „Schüler bauen Stühle" als Crowdfunding-' +
-    'Kampagne auf „viele schaffen mehr" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle ' +
-    'für unseren Chor finanziert. Nach demselben Modell möchten wir nun auch das ' +
+    'Kampagne auf „Allzesamme" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle für ' +
+    'unseren Chor finanziert. Nach demselben Modell möchten wir nun auch das ' +
     'Weihnachtskonzert unterstützen — jede Spende ab 5 Euro hilft uns weiter.',
   foerderhinweis:
     'Das Besondere an der Aktion: Die Volksbank Köln Bonn verdoppelt nicht nur, sondern legt ' +
@@ -35,8 +38,8 @@ export const SPENDENAKTION = {
   verlosungshinweis:
     'Wie im letzten Jahr warten auf 5 Gewinnerinnen und Gewinner unserer kleinen Verlosung ' +
     'nette Preise — es lohnt sich, beim Konzert dabei zu sein!',
-  plattform: 'viele schaffen mehr (Volksbank Köln Bonn)',
-  kampagnenUrl: '[Link zur Kampagne auf viele-schaffen-mehr.de einfügen]',
+  plattform: 'Allzesamme (Volksbank Köln Bonn)',
+  kampagnenUrl: '[Link zur Kampagne auf allzesamme.de einfügen]',
   spendenkonto: {
     inhaber: 'Kirchenchor Cäcilia Merten e.V.',
     iban: '[IBAN einfügen]',
