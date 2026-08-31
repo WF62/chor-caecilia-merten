@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import ChurchIcon from './ChurchIcon'
+import { ORGANISATION } from '../data/organisation'
 import './Header.css'
 
 const navLinks = [
@@ -35,9 +36,9 @@ export default function Header() {
             <ChurchIcon size={22} />
           </span>
           <span>
-            Chor Cäcilia
+            {ORGANISATION.kurzname}
             <br />
-            Merten
+            Chor Cäcilia Merten
           </span>
         </NavLink>
 

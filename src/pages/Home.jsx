@@ -26,12 +26,27 @@ export default function Home() {
         title="Kirchenchor Cäcilia Merten"
         text={ORGANISATION.slogan}
       >
+        <p
+          style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: '2rem',
+            fontWeight: 700,
+            letterSpacing: '0.3em',
+            color: 'var(--accent)',
+            margin: '0 0 0.3em',
+          }}
+        >
+          KCM
+        </p>
         <p style={{ fontStyle: 'italic', maxWidth: 400, marginInline: 'auto', lineHeight: 1.8 }}>
           <strong style={{ color: 'var(--accent)' }}>K</strong>langvoll schwingt der Ton empor,
           <br />
           <strong style={{ color: 'var(--accent)' }}>C</strong>horgeist strahlt in euer Ohr,
           <br />
           <strong style={{ color: 'var(--accent)' }}>M</strong>agie der Stimmen klingt hervor.
+        </p>
+        <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '-0.5em' }}>
+          {ORGANISATION.kurzname} steht für {ORGANISATION.name}
         </p>
         <p style={{ maxWidth: 640, marginInline: 'auto' }}>
           Seit 1871 gestaltet unser katholischer Kirchenchor Gottesdienste und Konzerte in
