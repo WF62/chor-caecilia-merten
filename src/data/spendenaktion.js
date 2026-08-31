@@ -32,6 +32,9 @@ export const SPENDENAKTION = {
   besonderheit:
     'Dieses Weihnachtskonzert ist etwas ganz Besonderes: Wir verabschieden unseren ' +
     'Chorleiter Stephan Krings nach 32 Jahren.',
+  verlosungshinweis:
+    'Wie im letzten Jahr warten auf 5 Gewinnerinnen und Gewinner unserer kleinen Verlosung ' +
+    'nette Preise — es lohnt sich, beim Konzert dabei zu sein!',
   plattform: 'viele schaffen mehr (Volksbank Köln Bonn)',
   kampagnenUrl: '[Link zur Kampagne auf viele-schaffen-mehr.de einfügen]',
   spendenkonto: {

@@ -13,6 +13,7 @@ export default function SpendenBanner() {
     aufruf,
     foerderhinweis,
     besonderheit,
+    verlosungshinweis,
     plattform,
     kampagnenUrl,
     spendenkonto,
@@ -41,6 +42,7 @@ export default function SpendenBanner() {
               <p>{aufruf}</p>
               <p className="spenden-banner__foerderhinweis">{foerderhinweis}</p>
               <p className="spenden-banner__besonderheit">{besonderheit}</p>
+              <p>{verlosungshinweis}</p>
               {kampagneVerfuegbar ? (
                 <a href={kampagnenUrl} target="_blank" rel="noreferrer" className="btn">
                   Zur Spendenaktion auf „{plattform}"
