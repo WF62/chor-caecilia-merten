@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useSEO } from '../hooks/useSEO'
 import Hero from '../components/Hero'
+import SpendenBanner from '../components/SpendenBanner'
 import { termine, formatiereDatum } from '../data/termine'
 import { ORGANISATION } from '../data/organisation'
 
@@ -58,6 +59,8 @@ export default function Home() {
           <Link to="/termine" className="btn btn-outline">Termine ansehen</Link>
         </div>
       </Hero>
+
+      <SpendenBanner />
 
       <section className="section">
         <div className="container">

@@ -20,9 +20,12 @@ export const termine = [
     id: 3,
     datum: '2026-12-13',
     zeit: '18:00',
-    titel: '[Beispiel] Weihnachtskonzert',
-    ort: '[Veranstaltungsort einfügen]',
-    beschreibung: 'Adventliches und weihnachtliches Programm mit Gastchor.',
+    titel: 'Abschiedskonzert für Chorleiter Stephan Krings',
+    ort: 'Pfarrkirche St. Martin, Merten',
+    beschreibung:
+      'Besonderes Weihnachtskonzert zum Abschied von Chorleiter Stephan Krings nach 32 Jahren. ' +
+      'Um dieses Konzert zu finanzieren, sind wir auf Spenden angewiesen — siehe unsere ' +
+      '5-Euro-Aktion auf der Startseite.',
   },
   {
     id: 4,
