@@ -5,17 +5,28 @@
 export const SPENDENAKTION = {
   aktiv: true,
   titel: '5-Euro-Aktion: Abschiedskonzert für unseren Chorleiter',
-  anlass:
-    'Ende dieses Jahres hört unser Chorleiter Stephan Krings nach 32 Jahren auf. Aus diesem ' +
-    'Anlass laden wir zu einem ganz besonderen Weihnachtskonzert ein.',
+  einleitung: [
+    'Seit einigen Jahren fusionieren katholische Kirchengemeinden. Durch Sparmaßnahmen ' +
+      'fallen an vielen Orten wichtige Einrichtungen weg — darunter auch Chöre. Wir stellen ' +
+      'uns dieser Situation: Mit Aktionen wie Projektwochen, Weihnachtskonzerten, ' +
+      'Benefizkonzerten und vielem mehr bieten wir interessierten Menschen aus dem Quartier ' +
+      'die Möglichkeit, sich von den Strapazen unruhiger Zeiten zu erholen und Raum für ' +
+      'schöne Dinge zu schaffen.',
+    'Auch wenn uns Sparmaßnahmen treffen, wollen wir an unseren Werten festhalten und den ' +
+      'Menschen weiterhin die Gelegenheit geben, daran teilzunehmen.',
+    'Damit wir auch in diesem Jahr das Weihnachtskonzert mit professionellen Akteuren ' +
+      'durchführen können, benötigen wir Ihre Unterstützung.',
+  ],
   konzertDatum: 'Sonntag, 13. Dezember 2026 (3. Advent)',
   konzertOrt: 'Pfarrkirche St. Martin, Merten',
   aufruf:
-    'Damit wir dieses Konzert stemmen können, sind wir auf Spenden angewiesen. Im vergangenen ' +
-    'Jahr hat unsere 5-Euro-Aktion „Schüler bauen Stühle" als Crowdfunding-Kampagne auf ' +
-    '„viele schaffen mehr" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle für unseren ' +
-    'Chor finanziert. Nach demselben Modell möchten wir nun auch das Weihnachtskonzert ' +
-    'unterstützen — jede Spende ab 5 Euro hilft uns weiter.',
+    'Im vergangenen Jahr hat unsere 5-Euro-Aktion „Schüler bauen Stühle" als Crowdfunding-' +
+    'Kampagne auf „viele schaffen mehr" (Volksbank Köln Bonn) mit großem Erfolg neue Stühle ' +
+    'für unseren Chor finanziert. Nach demselben Modell möchten wir nun auch das ' +
+    'Weihnachtskonzert unterstützen — jede Spende ab 5 Euro hilft uns weiter.',
+  besonderheit:
+    'Dieses Weihnachtskonzert ist etwas ganz Besonderes: Wir verabschieden unseren ' +
+    'Chorleiter Stephan Krings nach 32 Jahren.',
   plattform: 'viele schaffen mehr (Volksbank Köln Bonn)',
   kampagnenUrl: '[Link zur Kampagne auf viele-schaffen-mehr.de einfügen]',
   spendenkonto: {
