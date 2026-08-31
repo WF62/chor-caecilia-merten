@@ -1,16 +1,6 @@
 // Platzhalter-Termine – bitte durch echte Termine des Chors ersetzen.
 export const termine = [
   {
-    id: 5,
-    datum: '2026-05-14',
-    zeit: 'ganztägig',
-    titel: 'Chorausflug nach Schwerin',
-    ort: 'Schwerin und Umgebung',
-    beschreibung:
-      'Mehrtägiger Ausflug von Christi Himmelfahrt (Donnerstag, 14. Mai) bis Sonntag, ' +
-      '17. Mai 2026. Interessierte können sich schon jetzt melden.',
-  },
-  {
     id: 2,
     datum: '2026-11-22',
     zeit: '17:00',
@@ -44,6 +34,16 @@ export const termine = [
     titel: 'Osterhochamt',
     ort: '[Veranstaltungsort einfügen]',
     beschreibung: 'Musikalische Gestaltung des Osterhochamts.',
+  },
+  {
+    id: 5,
+    datum: '2027-05-06',
+    zeit: 'ganztägig',
+    titel: 'Chorausflug nach Schwerin',
+    ort: 'Schwerin und Umgebung',
+    beschreibung:
+      'Mehrtägiger Ausflug von Christi Himmelfahrt (Donnerstag, 6. Mai) bis Sonntag, ' +
+      '9. Mai 2027. Interessierte können sich schon jetzt melden.',
   },
 ]
 
