@@ -2,9 +2,11 @@
 // Crowdfunding-Kampagne auf "Allzesamme" (der bundesweite Markenname der
 // Plattform lautet "viele schaffen mehr" — im Rheinland, u. a. bei der
 // Volksbank Köln Bonn, tritt sie unter dem Namen "Allzesamme" auf) ersetzen,
-// sobald sie freigeschaltet ist. Bankverbindung dient als Alternative,
-// ebenfalls noch Platzhalter — bitte durch die echte Verbindung des Vereins
-// ersetzen.
+// sobald sie freigeschaltet ist. IBAN/BIC sind das echte, auf der
+// Pfarrei-Website (sankt-martin-merten.de) veröffentlichte Spendenkonto der
+// Pfarrgemeinde St. Martin Merten (Volksbank Köln Bonn, Spenden dort laut
+// Pfarrei steuerlich abzugsfähig) — Kontoinhaber ist die Pfarrgemeinde, nicht
+// der Chor-Verein selbst, daher entscheidend der Verwendungszweck.
 export const SPENDENAKTION_WEIHNACHTSKONZERT = {
   aktiv: true,
   titel: 'Weihnachtskonzert: Unsere 5-Euro-Aktion auf Allzesamme',
@@ -50,9 +52,9 @@ export const SPENDENAKTION_WEIHNACHTSKONZERT = {
   plattform: 'Allzesamme (Volksbank Köln Bonn)',
   kampagnenUrl: '[Link zur Kampagne auf allzesamme.de einfügen]',
   spendenkonto: {
-    inhaber: 'Kirchenchor Cäcilia Merten e.V.',
-    iban: '[IBAN einfügen]',
-    bic: '[BIC einfügen]',
-    verwendungszweck: '5-Euro-Aktion Weihnachtskonzert',
+    inhaber: 'Kath. Pfarrgemeinde St. Martin Merten',
+    iban: 'DE68 3806 0186 0410 3550 60',
+    bic: 'GENODED1BRS',
+    verwendungszweck: '5-Euro-Aktion Weihnachtskonzert Kirchenchor',
   },
 }

@@ -4,9 +4,10 @@ import Timeline from '../components/Timeline'
 
 const vorstand = [
   { rolle: 'Chorleitung', name: 'Stephan Krings' },
-  { rolle: '1. Vorsitzende/r', name: 'N.N.' },
-  { rolle: 'Schriftführung', name: 'N.N.' },
-  { rolle: 'Kassenführung', name: 'N.N.' },
+  { rolle: '1. Vorsitzender', name: 'Raimund Meyer' },
+  { rolle: '2. Vorsitzende', name: 'Monika Hüsgen' },
+  { rolle: 'Kassierer', name: 'Werner Nenner' },
+  { rolle: 'Schriftführerin', name: 'Maria Kortz' },
 ]
 
 const geschichte = [
@@ -19,6 +20,11 @@ const geschichte = [
     jahr: 'Später',
     titel: 'Zwei eigene Chöre',
     text: 'Der reine Männerchor wird mit Frauenstimmen verstärkt, um auch für gemischte Chöre geschriebene Messen zu singen. Daraus entwickeln sich zwei eigenständige Vereine: der Kirchenchor Cäcilia Merten und der Männergesangverein „Eintracht".',
+  },
+  {
+    jahr: '1978',
+    titel: 'Erstes Weihnachtskonzert',
+    text: 'Im Advent 1978 veranstaltet der Kirchenchor erstmals ein Weihnachtskonzert in der Pfarrkirche St. Martin — seither jährlicher musikalischer Höhepunkt der Chorarbeit, meist am 3. Adventssonntag.',
   },
   {
     jahr: '1992',
@@ -39,6 +45,11 @@ const geschichte = [
     jahr: '2015–2016',
     titel: 'Kooperation mit Krefeld',
     text: 'Gemeinsames Benefizkonzert mit dem Gesangverein Sängerbund 1884 Krefeld-Bockum, zunächst in Merten, im April 2016 wiederholt in Krefeld.',
+  },
+  {
+    jahr: '2022',
+    titel: '150 Jahre Kirchenchor',
+    text: 'Jubiläumsjahr mit Festkonzert am 11. Juni 2022 gemeinsam mit den drei weiteren Mertener Chören, der Cäcilienfest-Messe mit der Missa Brevis von Jacob de Haan und dem 42. Weihnachtskonzert — nach zweijähriger, coronabedingter Zwangspause.',
   },
 ]
 
@@ -82,14 +93,31 @@ export default function UeberUns() {
         <div className="container">
           <h2>Unser Repertoire</h2>
           <p style={{ maxWidth: 700 }}>
-            Von klassischer Kirchenmusik über Gospel bis zu bekannten Chorwerken – unser
-            Repertoire ist vielseitig. Wir proben wöchentlich neue Stücke ein und gestalten
-            regelmäßig Gottesdienste in der Pfarrkirche St. Martin sowie eigene Konzerte.
+            Das Repertoire reicht von anspruchsvoller Chorliteratur – u. a. Werke von J. S. Bach,
+            G. F. Händel, F. Mendelssohn Bartholdy und W. A. Mozart – über Volkslieder bis hin zu
+            neuem geistlichen Liedgut. Schwerpunkt ist die musikalische Mitgestaltung der
+            Gottesdienste in der Pfarrkirche St. Martin in Merten; die Aufführung weltlicher
+            Chorstücke bildet die zweite Säule. Bei Konzerten wird der Chor regelmäßig vom
+            Streicherensemble Ars Millennium sowie der Organistin und Cembalistin Barbara
+            Klinkhammer begleitet.
           </p>
         </div>
       </section>
 
       <section className="section section-alt">
+        <div className="container">
+          <h2>Chorfahrten</h2>
+          <p style={{ maxWidth: 700 }}>
+            Alle drei Jahre unternimmt der Chor eine mehrtägige Fahrt, verbunden mit der
+            musikalischen Gestaltung eines Gottesdienstes am Zielort: 2004 im Dom zu Speyer,
+            2007 in Zwiesel im Böhmerwald, 2010 in Mühlhausen im Thüringer Wald, 2013 im
+            Straßburger Münster, 2016 in der Basler Kirche St. Clara und 2019 in St. Antonius in
+            Papenburg. Die nächste Fahrt führt 2027 nach Schwerin und Umgebung.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <h2>Weitere Informationen</h2>
           <p style={{ maxWidth: 700 }}>

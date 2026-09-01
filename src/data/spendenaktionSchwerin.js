@@ -1,8 +1,10 @@
 // Zweite, unabhängige "Allzesamme"-Kampagne neben der Weihnachtskonzert-Aktion
-// (siehe src/data/spendenaktion.js) — eigener Kampagnen-Link/eigenes Spendenkonto,
-// da beide Aktionen unterschiedliche Zwecke verfolgen und getrennt abgerechnet
-// werden. Kampagnen-Link und Bankverbindung sind noch Platzhalter — bitte durch
-// die echten Angaben ersetzen, sobald die Kampagne freigeschaltet ist.
+// (siehe src/data/spendenaktion.js) — eigener Kampagnen-Link, da beide Aktionen
+// unterschiedliche Zwecke verfolgen und getrennt abgerechnet werden sollen.
+// Kampagnen-Link ist noch Platzhalter. Spendenkonto nutzt (wie bei der
+// Weihnachtskonzert-Aktion) das echte, auf der Pfarrei-Website veröffentlichte
+// Konto der Pfarrgemeinde St. Martin Merten — der Verwendungszweck ordnet die
+// Spende eindeutig dieser Aktion zu.
 export const SPENDENAKTION_SCHWERIN = {
   aktiv: true,
   titel: '5-Euro-Aktion: Chorausflug nach Schwerin für alle',
@@ -38,9 +40,9 @@ export const SPENDENAKTION_SCHWERIN = {
   plattform: 'Allzesamme (Volksbank Köln Bonn)',
   kampagnenUrl: '[Link zur Kampagne auf allzesamme.de einfügen]',
   spendenkonto: {
-    inhaber: 'Kirchenchor Cäcilia Merten e.V.',
-    iban: '[IBAN einfügen]',
-    bic: '[BIC einfügen]',
+    inhaber: 'Kath. Pfarrgemeinde St. Martin Merten',
+    iban: 'DE68 3806 0186 0410 3550 60',
+    bic: 'GENODED1BRS',
     verwendungszweck: '5-Euro-Aktion Chorausflug Schwerin',
   },
 }

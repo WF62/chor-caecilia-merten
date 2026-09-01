@@ -12,8 +12,8 @@ export default function Termine() {
       <section className="section">
         <div className="container">
           <p style={{ fontSize: '0.85rem', marginBottom: '2rem' }}>
-            Hinweis: Die folgenden Termine sind Beispiele zur Veranschaulichung und müssen durch
-            die echten Termine des Chors ersetzt werden (siehe <code>src/data/termine.js</code>).
+            Hinweis: Bei einzelnen Terminen fehlt noch der genaue Veranstaltungsort — bitte in{' '}
+            <code>src/data/termine.js</code> ergänzen.
           </p>
           <div className="grid" style={{ gridTemplateColumns: '1fr' }}>
             {termine.map((t) => (
