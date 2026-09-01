@@ -6,6 +6,7 @@ import { termine, formatiereDatum } from '../data/termine'
 import { ORGANISATION } from '../data/organisation'
 import { SPENDENAKTION_WEIHNACHTSKONZERT } from '../data/spendenaktion'
 import { SPENDENAKTION_SCHWERIN } from '../data/spendenaktionSchwerin'
+import { stimmen as zuhoererStimmen } from '../data/stimmen'
 
 const stimmen = [
   { name: 'Sopran', desc: 'Helle, hohe Frauenstimmen' },
@@ -95,6 +96,22 @@ export default function Home() {
 
       <section className="section section-alt">
         <div className="container">
+          <span className="eyebrow">Stimmen</span>
+          <h2>Was andere sagen</h2>
+          <div className="grid grid-3" style={{ marginTop: '2rem' }}>
+            {zuhoererStimmen.map((s) => (
+              <div className="card" key={s.name}>
+                <p style={{ fontStyle: 'italic' }}>„{s.text}“</p>
+                <strong style={{ color: 'var(--gold)' }}>{s.name}</strong>
+                <p style={{ margin: 0, color: 'var(--text-muted)' }}>{s.rolle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <span className="eyebrow">Proben</span>
           <h2>Jede Woche neu</h2>
           <p style={{ maxWidth: 680 }}>
@@ -106,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container">
           <span className="eyebrow">Termine</span>
           <h2>Was als Nächstes ansteht</h2>
@@ -127,7 +144,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="eyebrow">Mitmachen</span>
           <h2>Lust, mitzusingen?</h2>
