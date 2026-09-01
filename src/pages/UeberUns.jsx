@@ -88,6 +88,23 @@ export default function UeberUns() {
           </p>
         </div>
       </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <h2>Weitere Informationen</h2>
+          <p style={{ maxWidth: 700 }}>
+            Mehr über den Kirchenchor gibt es auch auf der Website der Pfarrei St. Martin
+            Merten:{' '}
+            <a
+              href="https://www.sankt-martin-merten.de/gemeindeleben/choere/kirchenchor"
+              target="_blank"
+              rel="noreferrer"
+            >
+              sankt-martin-merten.de/gemeindeleben/choere/kirchenchor
+            </a>
+          </p>
+        </div>
+      </section>
     </>
   )
 }
