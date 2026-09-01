@@ -12,6 +12,14 @@ export const termine = [
     beschreibung: 'Geselliges Beisammensein des Kirchenchores.',
   },
   {
+    id: 10,
+    datum: '2026-09-25',
+    zeit: '19:30',
+    titel: 'Friedensgebet',
+    ort: '[Veranstaltungsort einfügen]',
+    beschreibung: 'Musikalische Mitgestaltung des Friedensgebets.',
+  },
+  {
     id: 2,
     datum: '2026-11-22',
     zeit: '09:30',

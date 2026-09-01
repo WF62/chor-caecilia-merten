@@ -49,7 +49,7 @@ const geschichte = [
   {
     jahr: '2022',
     titel: '150 Jahre Kirchenchor',
-    text: 'Jubiläumsjahr mit Festkonzert am 11. Juni 2022 gemeinsam mit den drei weiteren Mertener Chören, der Cäcilienfest-Messe mit der Missa Brevis von Jacob de Haan und dem 42. Weihnachtskonzert — nach zweijähriger, coronabedingter Zwangspause.',
+    text: 'Jubiläumsjahr mit Festkonzert am 11. Juni 2022 gemeinsam mit den drei weiteren Mertener Chören (Kinderchor Merten, MGV Römer, Chor Esperanza), der Cäcilienfest-Messe mit der Missa Brevis von Jacob de Haan und dem 42. Weihnachtskonzert — nach zweijähriger, coronabedingter Zwangspause und zu Gast der St. Michael Chor aus Waldorf.',
   },
 ]
 
@@ -94,12 +94,13 @@ export default function UeberUns() {
           <h2>Unser Repertoire</h2>
           <p style={{ maxWidth: 700 }}>
             Das Repertoire reicht von anspruchsvoller Chorliteratur – u. a. Werke von J. S. Bach,
-            G. F. Händel, F. Mendelssohn Bartholdy und W. A. Mozart – über Volkslieder bis hin zu
-            neuem geistlichen Liedgut. Schwerpunkt ist die musikalische Mitgestaltung der
-            Gottesdienste in der Pfarrkirche St. Martin in Merten; die Aufführung weltlicher
-            Chorstücke bildet die zweite Säule. Bei Konzerten wird der Chor regelmäßig vom
-            Streicherensemble Ars Millennium sowie der Organistin und Cembalistin Barbara
-            Klinkhammer begleitet.
+            A. Diabelli, G. F. Händel, C. R. Kristinus, F. Mendelssohn Bartholdy, W. A. Mozart und
+            H. F. Müller – über Volkslieder bis hin zu neuem geistlichen Liedgut. Schwerpunkt ist
+            die musikalische Mitgestaltung der Gottesdienste in der Pfarrkirche St. Martin in
+            Merten; die Aufführung weltlicher Chorstücke bildet die zweite Säule. Bei Konzerten
+            wird der Chor instrumental begleitet – bis 2014 vom Minsker Streichquartett, seit 2015
+            vom Streicherensemble Ars Millennium – sowie seit Jahren von der Organistin und
+            Cembalistin Barbara Klinkhammer.
           </p>
         </div>
       </section>
@@ -110,9 +111,11 @@ export default function UeberUns() {
           <p style={{ maxWidth: 700 }}>
             Alle drei Jahre unternimmt der Chor eine mehrtägige Fahrt, verbunden mit der
             musikalischen Gestaltung eines Gottesdienstes am Zielort: 2004 im Dom zu Speyer,
-            2007 in Zwiesel im Böhmerwald, 2010 in Mühlhausen im Thüringer Wald, 2013 im
-            Straßburger Münster, 2016 in der Basler Kirche St. Clara und 2019 in St. Antonius in
-            Papenburg. Die nächste Fahrt führt 2027 nach Schwerin und Umgebung.
+            2007 in Zwiesel im Böhmerwald, 2010 in Mühlhausen im Thüringer Wald, 2013 an den
+            Kaiserstuhl und ins Elsass (im Straßburger Münster erklang die „Messe brève" in
+            F-Dur von Théodore Dubois), 2016 zum Abschluss einer Schweiz-Tour in der Basler
+            Kirche St. Clara und 2019 in St. Antonius in Papenburg. Die nächste Fahrt führt 2027
+            nach Schwerin und Umgebung.
           </p>
         </div>
       </section>
