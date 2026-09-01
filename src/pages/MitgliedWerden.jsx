@@ -22,6 +22,12 @@ const faq = [
     frage: 'Was kostet der Mitgliedsbeitrag pro Jahr?',
     antwort: '[Höhe des Mitgliedsbeitrags einfügen]',
   },
+  {
+    frage: 'An wen kann ich mich bei weiteren Fragen wenden?',
+    antwort:
+      'Sprich gerne eine unserer Sängerinnen oder einen unserer Sänger an, wende dich an ' +
+      'unseren Vorstand (siehe Über uns) — oder nutze einfach das Kontaktformular unten.',
+  },
 ]
 
 export default function MitgliedWerden() {

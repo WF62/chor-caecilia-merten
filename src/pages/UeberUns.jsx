@@ -69,7 +69,7 @@ export default function UeberUns() {
           <p style={{ maxWidth: 700, marginBottom: '2.5rem' }}>
             Der Kirchenchor Cäcilia Merten blickt auf eine über 150-jährige Geschichte zurück —
             von den Anfängen als Männergesangverein bis zum heutigen gemischten Chor mit rund
-            50 aktiven Mitgliedern.
+            50 aktiven Sängerinnen und Sängern sowie einer großen Zahl inaktiver Mitglieder.
           </p>
           <Timeline eintraege={geschichte} />
         </div>
