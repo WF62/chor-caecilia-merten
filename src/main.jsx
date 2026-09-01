@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx'
 import UeberUns from './pages/UeberUns.jsx'
 import Termine from './pages/Termine.jsx'
 import Galerie from './pages/Galerie.jsx'
+import Presse from './pages/Presse.jsx'
 import MitgliedWerden from './pages/MitgliedWerden.jsx'
 import Kontakt from './pages/Kontakt.jsx'
 import Mitgliederbereich from './pages/Mitgliederbereich.jsx'
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/termine" element={<Termine />} />
           <Route path="/galerie" element={<Galerie />} />
+          <Route path="/presse" element={<Presse />} />
           <Route path="/mitglied-werden" element={<MitgliedWerden />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/mitgliederbereich" element={<Mitgliederbereich />} />

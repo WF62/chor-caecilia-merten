@@ -23,6 +23,7 @@ npm run build
 | `/ueber-uns` | UeberUns.jsx | Geschichte, Vorstand & Chorleitung, Repertoire |
 | `/termine` | Termine.jsx | Alle Termine (Platzhalterdaten in `src/data/termine.js`) |
 | `/galerie` | Galerie.jsx | Foto-Galerie (aktuell Platzhalter-Kacheln) |
+| `/presse` | Presse.jsx | Presse-Archiv (Daten in `src/data/presse.js`) |
 | `/mitglied-werden` | MitgliedWerden.jsx | Ablauf des Einstiegs + Kontaktformular |
 | `/kontakt` | Kontakt.jsx | Adresse, Erreichbarkeit, Kontaktformular |
 | `/mitgliederbereich` | Mitgliederbereich.jsx | Interner Bereich mit echtem Login (siehe unten) |

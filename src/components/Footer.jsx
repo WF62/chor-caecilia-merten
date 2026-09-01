@@ -28,6 +28,7 @@ export default function Footer() {
           <h3>Navigation</h3>
           <nav className="site-footer__links">
             <Link to="/termine">Termine</Link>
+            <Link to="/presse">Presse</Link>
             <Link to="/mitglied-werden">Mitglied werden</Link>
             <Link to="/impressum">Impressum</Link>
             <Link to="/datenschutz">Datenschutz</Link>

@@ -9,6 +9,7 @@ const navLinks = [
   { to: '/ueber-uns', label: 'Über uns' },
   { to: '/termine', label: 'Termine' },
   { to: '/galerie', label: 'Galerie' },
+  { to: '/presse', label: 'Presse' },
   { to: '/mitglied-werden', label: 'Mitglied werden' },
   { to: '/kontakt', label: 'Kontakt' },
   { to: '/mitgliederbereich', label: 'Mitgliederbereich' },
